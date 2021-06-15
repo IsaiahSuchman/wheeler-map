@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Wheeler Map</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src='data.geojson'></script>
+	<script src="https://kit.fontawesome.com/a8a802a6de.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href='style.css' rel='stylesheet' />
+</head>
+<body style="margin:0;">
+	<!-- Load the `mapbox-gl-geocoder` plugin. --> 
+	<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+	<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+	<!-- Promise polyfill script is required -->
+	<!-- to use Mapbox GL Geocoder in IE 11. -->
+	<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+	
+	<div id='sidebar'>
+		<div id='heading'>
+			<h1></h1>
+		</div>
+		<div id='infobox' class='infobox'></div>
+	</div>
+	<div id='map'></div>
+	<div id='floorSelector' class='mapboxgl-ctrl-top-right mapboxgl-ctrl mapboxgl-ctrl-group'>
+		<div class='floor floor-4 disabled' data-floor='4' type='button'>4</div>
+		<div class='floor floor-3 disabled' data-floor='3' type='button'>3</div>
+		<div class='floor floor-2 disabled' data-floor='2' type='button'>2</div>
+		<div class='floor floor-1 clicked disabled' data-floor='1' type='button'>1</div>
+		<div class='floor floor-0 disabled' data-floor='0' type='button'>0</div>
+	</div>
+
+	<script>
+		// Mapbox token
+		mapboxgl.accessToken = 'pk.eyJ1IjoiaXNhaWFoc3VjaG1hbiIsImEiOiJja29tYml4dnUwMTh5MnBwZDc3Y3h6bWFzIn0.6vb_akj8V9jTxiBtlOMRGg';
+		
+		// Initiate map
+		var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/isaiahsuchman/ckp7xcajv1wmb1amud47a5v2v',
+			center: [-71.398646, 41.828826],
+			zoom: 18
+		});
+		
+		// Add custom data to geocoder
+		function customGeocoder(query) {
+			var matchingFeatures = [];
+			for (var i = 0; i < customData.features.length; i++) {
+				var feature = customData.features[i];
+				console.log("feature: " + feature);
+				if (feature.properties.selectable) {
+					console.log("feature is selectable");
+					console.log(feature.properties.title);
+					// Handle queries with different capitalization than the source data by calling toLowerCase()
+					if (feature.properties.title != null){
+						if (
+							feature.properties.title
+							.toLowerCase()
+							.search(query.toLowerCase()) != -1
+						) {
+							console.log("found match");
+							// Use Carmen geojson format:
+							// https://github.com/mapbox/carmen/blob/master/carmen-geojson.md
+							feature['place_name'] = feature.properties.title;
+							if (feature.geometry.type == "Point") {
+								feature['center'] = feature.geometry.coordinates;
+							} else {
+								var centroid = turf.centerOfMass(turf.polygon(feature.geometry.coordinates));
+								feature['center'] = centroid.geometry.coordinates;
+							}
+							matchingFeatures.push(feature);
+							console.log(matchingFeatures);
+						}
+					}
+				}
+			}
+			return matchingFeatures;
+		}
+		
+		// Add geocoder control to map
+		map.addControl(
+			new MapboxGeocoder({
+				accessToken: mapboxgl.accessToken,
+				localGeocoder: customGeocoder,
+				localGeocoderOnly: true,
+				zoom: 21,
+				bbox: [-71.39971460574294,41.82809919529407,-71.39671714876509,41.83013742558967],
+				mapboxgl: mapboxgl,
+				marker: {
+					color: 'orange'
+				},
+				render: function (item) {
+					var icon = item.properties.icon || 'icon';
+					return (
+						"<div class='geocoder-dropdown-item'><i class='" + 
+						item.properties.icon +
+						"'></i><span class='geocoder-dropdown-text'>" +
+						item.place_name +
+						'</span></div>'
+					);
+				},
+				placeholder: 'Enter search...'
+			}),
+			'top-left'
+		);
+		
+		// Add zoom and rotation controls to the map.
+		map.addControl(new mapboxgl.NavigationControl());
+		
+		// Add geolocate control to the map.
+		map.addControl(
+			new mapboxgl.GeolocateControl({
+				positionOptions: {
+					enableHighAccuracy: true
+				},
+				trackUserLocation: true,
+				fitBoundsOptions: {
+					maxZoom: 20
+				},
+				showAccuracyCircle: false
+			})
+		);
+		
+		// Define max bounds of map
+		var bounds = [
+			[-71.402489,41.826071],
+			[-71.394685,41.831241],
+		];
+		map.setMaxBounds(bounds);
+		
+		// Find polygon centers
+		var centers = {
+			"type": "FeatureCollection",
+			"features": []
+		};
+		for (var i = 0; i < customData.features.length; i++) {
+			var feature = customData.features[i];
+			if (feature.geometry.type == "Polygon") {
+				centers.features.push(
+					{
+						"type": "Feature",
+						"properties": feature.properties,
+						"geometry": turf.centerOfMass(turf.polygon(feature.geometry.coordinates)).geometry
+					}
+				);
+			}
+		}
+		
+		map.on('load', function () {
+			// Add custom geojson as new source
+			map.addSource('custom_data', {
+				'type': 'geojson',
+				'data': customData,
+				'generateId': true
+			});
+			map.addSource('centers', {
+				'type': 'geojson',
+				'data': centers,
+				'generateId': true
+			});
+			
+			// Add custom images for point icons -- if you're trying to run this locally, adding these images referencing local paths will break the whole map because of some kind of CORS error... paste in a PNG with a URL as a placeholder instead
+			var images = [
+				{
+					imageUrl: './images/recycling.png',
+					id: 'recycling'
+				},
+				{
+					imageUrl: './images/entryexit.png',
+					id: 'entryexit'
+				},
+				{
+					imageUrl: './images/playground.png',
+					id: 'playground'
+				},
+				{
+					imageUrl: './images/sitting.png',
+					id: 'sitting'
+				},
+				{
+					imageUrl: './images/up-stairbuttons.png',
+					id: 'up-stairbuttons'
+				},
+				{
+					imageUrl: './images/down-stairbuttons.png',
+					id: 'down-stairbuttons'
+				},
+				{
+					imageUrl: './images/water.png',
+					id: 'water'
+				}
+			];
+			
+			Promise.all(
+				images.map(img => new Promise((resolve, reject) => {
+					map.loadImage(img.imageUrl, function (error, res) {
+						map.addImage(img.id, res, { sdf: true })
+						resolve();
+					})
+				}))
+			)
+			.then((value) => {
+				
+				// Add custom geojson source as a bunch of layers
+				map.addLayer({
+					'id': "landcover-natural-floor-6",
+					'type': "fill",
+					'source': 'custom_data',
+					'paint': {
+						'fill-color': "#7C9C6E"
+					},
+					'filter': ['all', ['==', 'place_type', "landcover-natural"], ['==', 'floor', 6], ['==', 'selectable', false]]
+				});
+				map.addLayer({
+					'id': "landcover-path-floor-6",
+					'type': "fill",
+					'source': 'custom_data',
+					'paint': {
+						'fill-color': "#767676"
+					},
+					'filter': ['all', ['==', 'place_type', "landcover-path"], ['==', 'floor', 6], ['==', 'selectable', false]]
+				});
+				map.addLayer({
+					'id': "selectable-landcover-path-floor-6",
+					'type': "fill",
+					'source': 'custom_data',
+					'paint': {
+						'fill-color': [
+									'case',
+									['boolean', ['feature-state', 'active'], false],
+									"#383838",
+									['boolean', ['feature-state', 'hover'], false],
+									"#545454",
+									"#767676"
+								]
+					},
+					'filter': ['all', ['==', 'place_type', "landcover-path"], ['==', 'floor', 6], ['==', 'selectable', true]]
+				});
+				map.addLayer({
+					'id': "landcover-brick-floor-6",
+					'type': "fill",
+					'source': 'custom_data',
+					'paint': {
+						'fill-color': "#DA523B"
+					},
+					'filter': ['all', ['==', 'place_type', "landcover-brick"], ['==', 'floor', 6], ['==', 'selectable', false]]
+				});
+				map.addLayer({
+					'id': "selectable-landcover-grass-floor-6",
+					'type': "fill",
+					'source': 'custom_data',
+					'paint': {
+						'fill-color': [
+									'case',
+									['boolean', ['feature-state', 'active'], false],
+									"#1B4B2D",
+									['boolean', ['feature-state', 'hover'], false],
+									"#7C9C6E",
+									"#a6bd8a"
+								]
+					},
+					'filter': ['all', ['==', 'place_type', "landcover-grass"], ['==', 'floor', 6], ['==', 'selectable', true]]
+				});
+				map.addLayer({
+					'id': "selectable-landcover-court-floor-6",
+					'type': "fill",
+					'source': 'custom_data',
+					'paint': {
+						'fill-color': [
+									'case',
+									['boolean', ['feature-state', 'active'], false],
+									"#425e4c",
+									['boolean', ['feature-state', 'hover'], false],
+									"#5c8a6c",
+									"#739c82"
+								]
+					},
+					'filter': ['all', ['==', 'place_type', "landcover-grass"], ['==', 'floor', 6], ['==', 'selectable', true]]
+				});
+				map.addLayer({
+					'id': "selectable-landcover-parkinglot-floor-6",
+					'type': "fill",
+					'source': 'custom_data',
+					'paint': {
+						'fill-color': [
+									'case',
+									['boolean', ['feature-state', 'active'], false],
+									"#242424",
+									['boolean', ['feature-state', 'hover'], false],
+									"#424242",
+									"#5c5c5c"
+								]
+					},
+					'filter': ['all', ['==', 'place_type', "landcover-parkinglot"], ['==', 'floor', 6], ['==', 'selectable', true]]
+				});
+				map.addLayer({
+					'id': "playgroundstructure-floor-6",
+					'type': "fill",
+					'source': 'custom_data',
+					'paint': {
+						'fill-color': "#c9a173"
+					},
+					'filter': ['all', ['==', 'place_type', "playgroundstructure"], ['==', 'floor', 6]]
+				});
+				map.addLayer({
+					'id': "walls-floor-6",
+					'type': "line",
+					'source': 'custom_data',
+					'layout': {
+						'line-cap': 'butt',
+						'line-join': 'round'
+					},
+					'paint': {
+						'line-color': "#c9c9c9",
+						'line-width': 5
+					},
+					'filter': ['all', ['==', 'place_type', "walls"], ['==', 'floor', 6]]
+				});
+				map.addLayer({
+					'id': "fence-floor-6",
+					'type': "line",
+					'source': 'custom_data',
+					'layout': {
+						'line-cap': 'butt',
+						'line-join': 'round'
+					},
+					'paint': {
+						'line-color': "#740410",
+						'line-width': 2
+					},
+					'filter': ['all', ['==', 'place_type', "fence"], ['==', 'floor', 6]]
+				});
+				map.addLayer({
+					'id': "trees-floor-6",
+					'type': "fill",
+					'source': 'custom_data',
+					'paint': {
+						'fill-color': "#a6bd8a"
+					},
+					'filter': ['all', ['==', 'place_type', "trees"], ['==', 'floor', 6]]
+				});
+				map.addLayer({
+					'id': "building-floor-5",
+					'type': "fill",
+					'source': 'custom_data',
+					'maxzoom': 19,
+					'paint': {
+						'fill-color': [
+							'case',
+							['boolean', ['feature-state', 'active'], false],
+							"#a37f23",
+							['boolean', ['feature-state', 'hover'], false],
+							"#CAA536",
+							"#FECD64"
+						]
+					},
+					'filter': ['all', ['==', 'place_type', "building"], ['==', 'floor', 5]]
+				});
+				map.addLayer({
+					'id': "building-floor-1",
+					'type': "fill",
+					'source': 'custom_data',
+					'minzoom': 19,
+					'paint': {
+						'fill-color': [
+							'case',
+							['boolean', ['feature-state', 'active'], false],
+							"#a37f23",
+							['boolean', ['feature-state', 'hover'], false],
+							"#CAA536",
+							"#FECD64"
+						]
+					},
+					'filter': ['all', ['==', 'place_type', "building"], ['==', 'floor', 1]]
+				});
+				map.addLayer({
+					'id': "room-floor-1",
+					'type': "fill",
+					'source': 'custom_data',
+					'minzoom': 19,
+					'paint': {
+						'fill-color': [
+									'case',
+									['boolean', ['feature-state', 'active'], false],
+									"#a37f23",
+									['boolean', ['feature-state', 'hover'], false],
+									"#CAA536",
+									"#FECD64"
+								]
+					},
+					'filter': ['all', ['==', 'place_type', "room"], ['==', 'floor', 1], ['!=', 'icon', 'fas fa-restroom'], ['==', 'open', true]]
+				});
+				map.addLayer({
+					'id': "bathroom-room-floor-1",
+					'type': "fill",
+					'source': 'custom_data',
+					'minzoom': 19,
+					'paint': {
+						'fill-color': [
+									'case',
+									['boolean', ['feature-state', 'active'], false],
+									"#106D8F",
+									['boolean', ['feature-state', 'hover'], false],
+									"#819ec6",
+									"#9cc2dc"
+								]
+					},
+					'filter': ['all', ['==', 'place_type', "room"], ['==', 'floor', 1], ['==', 'icon', 'fas fa-restroom']]
+				});
+				map.addLayer({
+					'id': "closed-room-floor-1",
+					'type': "fill",
+					'source': 'custom_data',
+					'minzoom': 19,
+					'paint': {
+						'fill-color': [
+									'case',
+									['boolean', ['feature-state', 'active'], false],
+									"#4a4a4a",
+									['boolean', ['feature-state', 'hover'], false],
+									"#767676",
+									"#d8d8d8"
+								]
+					},
+					'filter': ['all', ['==', 'place_type', "room"], ['==', 'floor', 1], ['==', 'open', false]]
+				});
+				map.addLayer({
+					'id': "stairs-floor-1",
+					'type': "fill",
+					'source': 'custom_data',
+					'minzoom': 19,
+					'paint': {
+						'fill-color': "#C19DC3"
+					},
+					'filter': ['all', ['==', 'place_type', "stairs"], ['==', 'floor', 1]]
+				});
+				map.addLayer({
+					'id': "railing-floor-1",
+					'type': "line",
+					'source': 'custom_data',
+					'minzoom': 19,
+					'layout': {
+						'line-cap': 'butt',
+						'line-join': 'round'
+					},
+					'paint': {
+						'line-color': "#6e42bd",
+						'line-width': 4
+					},
+					'filter': ['all', ['==', 'place_type', "railing"], ['==', 'floor', 1]]
+				});
+				map.addLayer({
+					'id': "line-floor-1",
+					'type': "line",
+					'source': 'custom_data',
+					'minzoom': 19,
+					'layout': {
+						'line-cap': 'butt',
+						'line-join': 'round'
+					},
+					'paint': {
+						'line-color': "#3d1a79",
+						'line-width': 4
+					},
+					'filter': ['all', ['==', 'place_type', "line"], ['==', 'floor', 1]]
+				});
+				map.addLayer({
+					'id': "selectable-landcover-parkinglot-floor-6-labels",
+					'type': 'symbol',
+					'source': 'centers',
+					'layout': {
+						'text-field': ['get', 'title'],
+						'text-letter-spacing': 1,
+						'text-font': ['Franklin Gothic FS Demi'],
+						'text-size': 14,
+						'text-transform': 'uppercase'
+					},
+					'paint': {
+						'text-color': '#ffffff',
+						'text-halo-blur': 1,
+						'text-halo-color': '#888888',
+						'text-halo-width': 1,
+					},
+					'filter': ['all', ['==', 'place_type', "landcover-parkinglot"], ['==', 'floor', 6], ['==', 'selectable', true]]
+				});
+				map.addLayer({
+					'id': "selectable-landcover-court-floor-6-labels",
+					'type': 'symbol',
+					'source': 'centers',
+					'layout': {
+						'text-field': ['get', 'title'],
+						'text-letter-spacing': 1,
+						'text-font': ['Franklin Gothic FS Demi'],
+						'text-size': 14,
+						'text-transform': 'uppercase'
+					},
+					'paint': {
+						'text-color': '#ffffff',
+						'text-halo-blur': 1,
+						'text-halo-color': '#888888',
+						'text-halo-width': 1,
+					},
+					'filter': ['all', ['==', 'place_type', "landcover-court"], ['==', 'floor', 6], ['==', 'selectable', true]]
+				});
+				map.addLayer({
+					'id': "selectable-landcover-path-floor-6-labels",
+					'type': 'symbol',
+					'source': 'centers',
+					'layout': {
+						'text-field': ['get', 'title'],
+						'text-letter-spacing': 1,
+						'text-font': ['Franklin Gothic FS Demi'],
+						'text-size': 14,
+						'text-transform': 'uppercase'
+					},
+					'paint': {
+						'text-color': '#ffffff',
+						'text-halo-blur': 1,
+						'text-halo-color': '#888888',
+						'text-halo-width': 1,
+					},
+					'filter': ['all', ['==', 'place_type', "landcover-path"], ['==', 'floor', 6], ['==', 'selectable', true]]
+				});
+				map.addLayer({
+					'id': "selectable-landcover-grass-floor-6-labels",
+					'type': 'symbol',
+					'source': 'centers',
+					'layout': {
+						'text-field': ['get', 'title'],
+						'text-letter-spacing': 1,
+						'text-font': ['Franklin Gothic FS Demi'],
+						'text-size': 14,
+						'text-transform': 'uppercase'
+					},
+					'paint': {
+						'text-color': '#ffffff',
+						'text-halo-blur': 1,
+						'text-halo-color': '#888888',
+						'text-halo-width': 1,
+					},
+					'filter': ['all', ['==', 'place_type', "landcover-grass"], ['==', 'floor', 6], ['==', 'selectable', true]]
+				});
+				map.addLayer({
+					'id': "building-floor-5-labels",
+					'type': 'symbol',
+					'source': 'centers',
+					'maxzoom': 19,
+					'layout': {
+						'text-field': ['get', 'title'],
+						'text-font': ['Franklin Gothic FS Demi'],
+						'text-size': 14
+					},
+					'paint': {
+						'text-color': '#ffffff',
+						'text-halo-blur': 1,
+						'text-halo-color': '#888888',
+						'text-halo-width': 1,
+					},
+					'filter': ['all', ['==', 'place_type', "building"], ['==', 'floor', 5]]
+				});
+				map.addLayer({
+					'id': "building-floor-1-labels",
+					'type': 'symbol',
+					'source': 'centers',
+					'minzoom': 19,
+					'layout': {
+						'text-field': ['get', 'title'],
+						'text-font': ['Franklin Gothic FS Demi'],
+						'text-size': 14
+					},
+					'paint': {
+						'text-color': '#ffffff',
+						'text-halo-blur': 1,
+						'text-halo-color': '#888888',
+						'text-halo-width': 1,
+					},
+					'filter': ['all', ['==', 'place_type', "building"], ['==', 'floor', 1]]
+				});
+				map.addLayer({
+					'id': "room-floor-1-labels",
+					'type': 'symbol',
+					'source': 'centers',
+					'minzoom': 19,
+					'layout': {
+						'text-field': ['get', 'title'],
+						'text-font': ['Franklin Gothic FS Demi'],
+						'text-size': 14
+					},
+					'paint': {
+						'text-color': '#ffffff',
+						'text-halo-blur': 1,
+						'text-halo-color': '#888888',
+						'text-halo-width': 1,
+					},
+					'filter': ['all', ['==', 'place_type', "room"], ['==', 'floor', 1]]
+				});
+				map.addLayer({
+					'id': "playground-floor-6",
+					'type': "symbol",
+					'source': 'custom_data',
+					'minzoom': 19,
+					'layout': {
+						'icon-allow-overlap': true,
+						'icon-image': "playground",
+						'icon-size': 0.25
+					},
+					'filter': ['all', ['==', 'place_type', "playground"], ['==', 'floor', 6]]
+				});
+				map.addLayer({
+					'id': "entryexit-floor-1",
+					'type': "symbol",
+					'source': 'custom_data',
+					'minzoom': 19,
+					'layout': {
+						'icon-allow-overlap': true,
+						'icon-image': "entryexit",
+						'icon-size': 0.25
+					},
+					'filter': ['all', ['==', 'place_type', "entryexit"], ['==', 'floor', 1]]
+				});
+				map.addLayer({
+					'id': "recycling-floor-1",
+					'type': "symbol",
+					'source': 'custom_data',
+					'minzoom': 19,
+					'layout': {
+						'icon-allow-overlap': true,
+						'icon-image': "recycling",
+						'icon-size': 0.25
+					},
+					'filter': ['all', ['==', 'place_type', "recycling"], ['==', 'floor', 1]]
+				});
+				map.addLayer({
+					'id': "sitting-floor-1",
+					'type': "symbol",
+					'source': 'custom_data',
+					'minzoom': 19,
+					'layout': {
+						'icon-allow-overlap': true,
+						'icon-image': "entryexit",
+						'icon-size': 0.25
+					},
+					'filter': ['all', ['==', 'place_type', "sitting"], ['==', 'floor', 1]]
+				});
+				map.addLayer({
+					'id': "up-stairbuttons-floor-1",
+					'type': "symbol",
+					'source': 'custom_data',
+					'minzoom': 19,
+					'layout': {
+						'icon-allow-overlap': true,
+						'icon-image': "up-stairbuttons",
+						'icon-size': 0.25
+					},
+					'filter': ['all', ['==', 'place_type', "stairbuttons"], ['==', 'floor', 1], ["==", "direction", "up"]]
+				});
+				map.addLayer({
+					'id': "down-stairbuttons-floor-1",
+					'type': "symbol",
+					'source': 'custom_data',
+					'minzoom': 19,
+					'layout': {
+						'icon-allow-overlap': true,
+						'icon-image': "down-stairbuttons",
+						'icon-size': 0.25
+					},
+					'filter': ['all', ['==', 'place_type', "stairbuttons"], ['==', 'floor', 1], ["==", "direction", "down"]]
+				});
+				
+				//------------------------------------
+			
+				// Get all floor-toggled layers
+				var floorLayerIDs = [];
+				map.getStyle().layers.forEach(function(layer) {
+						if (layer.id.includes("floor-0")
+							|| layer.id.includes("floor-1")
+							|| layer.id.includes("floor-2")
+							|| layer.id.includes("floor-3")
+							|| layer.id.includes("floor-4")
+						) {
+							floorLayerIDs.push(layer.id);
+						}
+				});
+				
+				// Set default to visible first floor
+				changeFloor(1);
+				
+				// Floor change function
+				function changeFloor(clickedFloor) {
+					floorLayerIDs.forEach(function(id) {
+						if (id.includes(clickedFloor)) {
+							map.setLayoutProperty(id, 'visibility', 'visible');
+						} else {
+							map.setLayoutProperty(id, 'visibility', 'none');
+						}
+					});
+				};
+				
+				// Floor selector buttons operate on click
+				var floorButtons = $('#floorSelector');
+				floorButtons.click(function(e) {
+					if (!e.target.classList.contains('disabled') && !e.target.classList.contains('clicked')) {
+						var clickedFloor = parseInt(e.target.getAttribute('data-floor')) 
+						var floorEls = Array.prototype.slice.call($('.floor'));	
+						floorEls.forEach(function(el, i){
+							if (el.classList.contains('clicked') || el.getAttribute('data-floor') == clickedFloor) {
+								el.classList.toggle('clicked');
+							}
+						});
+						changeFloor(clickedFloor);
+					}
+				});
+				
+				// Enable or disable floor buttons based on zoom
+				map.on('zoom', function () {
+					floorSelector.querySelectorAll(".floor").forEach(function(e) {
+						e.classList.toggle("disabled", map.getZoom() <= 19);
+					});
+				});
+				
+				// Set default to non-hovered and non-active
+				var hoveredStateId = null;
+				var activeStateId = null;
+				var sidebar = $('#sidebar');
+				map.getStyle().layers.forEach(function(layer) {
+						if (layer.id == "down-stairbuttons-floor-1"
+							|| layer.id == "up-stairbuttons-floor-1"
+							|| layer.id == "sitting-floor-1"
+							|| layer.id == "recycling-floor-1"
+							|| layer.id == "entryexit-floor-1"
+							|| layer.id == "closed-room-floor-1"
+							|| layer.id == "bathroom-room-floor-1"
+							|| layer.id == "room-floor-1"
+							|| layer.id == "building-floor-1"
+							|| layer.id == "building-floor-5"
+							|| layer.id == "selectable-landcover-parkinglot-floor-6"
+							|| layer.id == "selectable-landcover-court-floor-6"
+							|| layer.id == "selectable-landcover-grass-floor-6"
+							|| layer.id == "selectable-landcover-path-floor-6"
+						) {
+							// Mouse change to pointer and change color on polygon hover
+							map.on('mouseenter', layer.id, function (e) {
+								map.getCanvas().style.cursor = 'pointer';
+								if (e.features.length > 0) {
+									if (hoveredStateId !== null) {
+										map.setFeatureState({
+											source: 'custom_data',
+											id: hoveredStateId
+										}, {
+											hover: false
+										});
+									}
+									hoveredStateId = e.features[0].id;
+									map.setFeatureState({
+										source: 'custom_data',
+										id: hoveredStateId
+									}, {
+										hover: true
+									});
+								}
+							});
+							map.on('mouseleave', layer.id, function (e) {
+								map.getCanvas().style.cursor = '';
+								if (hoveredStateId !== null) {
+									map.setFeatureState({
+										source: 'custom_data',
+										id: hoveredStateId
+									}, {
+										hover: false
+									});
+								}
+								hoveredStateId = null;
+							});
+							map.on('click', layer.id, function(e) {
+								e.preventDefault();
+								// Turn on 'active' state
+								if (e.features.length > 0) {
+									if (activeStateId !== null) {
+										map.setFeatureState({
+											source: 'custom_data',
+											id: activeStateId
+										}, {
+											active: false
+										});
+									}
+									if (activeStateId == e.features[0].id) {
+										activeStateId = null;
+										sidebar.hide();
+									} else {
+										activeStateId = e.features[0].id;
+										map.setFeatureState({
+											source: 'custom_data',
+											id: activeStateId
+										}, {
+											active: true
+										});
+										// Center feature in map
+										if (e.features[0].geometry.type == "Polygon") {
+											map.flyTo({
+												center: turf.centerOfMass(turf.polygon(e.features[0].geometry.coordinates)).geometry.coordinates
+											});
+										} else {
+											map.flyTo({
+												center: e.features[0].geometry.coordinates
+											});
+										}
+										// Open up pop-up sidebar
+										$('#heading h1').text(e.features[0].properties.title);
+										$('#infobox').text(e.features[0].properties.description);
+										sidebar.show();
+									}
+								}
+							});
+						}
+				});
+				map.on('click', function (e) {
+					if (e.defaultPrevented === false) {
+						// Turn off 'active' state
+						if (activeStateId !== null) {
+							map.setFeatureState({
+								source: 'custom_data',
+								id: activeStateId
+							}, {
+								active: false
+							});
+						}
+						activeStateId = null;
+						// Close pop-up sidebar
+						sidebar.hide();
+					}
+				}); 
+			})
+		});
+	</script>
+</body>
+</html>
+

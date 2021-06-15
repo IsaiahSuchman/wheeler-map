@@ -1,0 +1,131 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Water Fountain",
+		"names": [
+		],
+        "place_type": "water",
+		"description": null,
+		"icon": "fas fa-tint",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39786925437475,
+          41.82855989298624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Water Fountain",
+		"names": [
+		],
+        "place_type": "water",
+		"description": null,
+		"icon": "fas fa-tint",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39816567671049,
+          41.82849559428413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Water Fountain",
+		"names": [
+		],
+        "place_type": "water",
+		"description": null,
+		"icon": "fas fa-tint",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3983924759402,
+          41.82859920567506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Water Fountain",
+		"names": [
+		],
+        "place_type": "water",
+		"description": null,
+		"icon": "fas fa-tint",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39926635093083,
+          41.82846943047162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Water Fountain",
+		"names": [
+		],
+        "place_type": "water",
+		"description": null,
+		"icon": "fas fa-tint",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39748184066552,
+          41.82868887792498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Water Fountain",
+		"names": [
+		],
+        "place_type": "water",
+		"description": null,
+		"icon": "fas fa-tint",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3976458273828,
+          41.8291487770914
+        ]
+      }
+    }
+  ]
+}

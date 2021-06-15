@@ -1,0 +1,230 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39826368449177,
+          41.82900017429113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39828491318505,
+          41.82908755072428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39796004602542,
+          41.82891066596312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39858949109289,
+          41.82846143974446
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39908890538119,
+          41.82841681977077
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39918851234808,
+          41.82838233729626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39818368702369,
+          41.82892478394871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39813517292367,
+          41.82892906257009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39865951382755,
+          41.82923611009196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39892581211825,
+          41.82923907679205
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39890812158117,
+          41.82842976000263
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39760379554211,
+          41.82915283336735
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39773228722332,
+          41.82906906467226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39760409543136,
+          41.82905044445268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "entryexit",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39760293613617,
+          41.8287013858543
+        ]
+      }
+    }
+  ]
+}

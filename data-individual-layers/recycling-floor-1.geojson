@@ -1,0 +1,488 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3981530234098,
+          41.82849648873457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39805127750549,
+          41.82861475482683
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39819586059917,
+          41.82880411762646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3980286695413,
+          41.82877236336226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39830372324357,
+          41.82887181542219
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39849294249603,
+          41.82884896125826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39855498943355,
+          41.82897411489182
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39856416460466,
+          41.82903197327784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39875200464724,
+          41.828907266915
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39895273779207,
+          41.828857473824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39903897193152,
+          41.82850814689048
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39912002877237,
+          41.82852289103686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3992528581111,
+          41.82847062319351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39919484897236,
+          41.8284460545601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39897214750707,
+          41.82905041460734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39822478514826,
+          41.82907975376438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39825704800874,
+          41.8292829513828
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39741237763057,
+          41.82922570421215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39742361164258,
+          41.82857202812172
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39860877394882,
+          41.82865284561884
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39876534790007,
+          41.82866059154751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39876534790007,
+          41.82868106613637
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Recycling and Trash Bins",
+		"names": [
+		],
+        "place_type": "recycling",
+		"description": null,
+		"icon": "fas fa-trash-alt",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39786037057435,
+          41.82856120442357
+        ]
+      }
+    }
+  ]
+}

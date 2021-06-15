@@ -1,0 +1,773 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3985866126198,
+          41.82919764715381
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3984925226755,
+          41.82916474493573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39849028387665,
+          41.82915061207296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39842825694802,
+          41.82915645602809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39839817298174,
+          41.82916006381165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39839645380384,
+          41.82914919578395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39831505717798,
+          41.82900248503057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39831319818528,
+          41.82899076728045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.397646330297,
+          41.82914865217809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39764046296477,
+          41.8291390338539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.397667452693,
+          41.82906995675573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39803094835791,
+          41.82874417215911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39801915458519,
+          41.82873296122841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39786809495756,
+          41.82850139347125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39788624533294,
+          41.82849474451073
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3979889706965,
+          41.82857168526422
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39796468357217,
+          41.82858083886793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39836603005256,
+          41.8285243520029
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39838144177303,
+          41.82852801943165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39840578892401,
+          41.82856458898749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.398431835,
+          41.82855606159007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39847401262824,
+          41.82861675246312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39847629132285,
+          41.82863045302335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39859080314638,
+          41.82860864973891
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39857538044453,
+          41.82860964905367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39859338905822,
+          41.82850278001296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39861445778722,
+          41.82850091649168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39870792806616,
+          41.82851488538703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39864724039066,
+          41.82863699770714
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39864961912969,
+          41.82865201018866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3988028775384,
+          41.82865967298099
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.398788645122,
+          41.8286609252116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3987752122679,
+          41.82877421195382
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39847988938371,
+          41.82880923118957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3984474266784,
+          41.82871298441051
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39911794992258,
+          41.82844678513411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39909692106636,
+          41.82844863373271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39921859634485,
+          41.82849274678344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39920436389797,
+          41.82849401402771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39931954262481,
+          41.82847971710515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39930261163227,
+          41.82848120791653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39905432374734,
+          41.82863908487947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39905784189467,
+          41.82866128299177
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39900738870205,
+          41.82866316142867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39899315628566,
+          41.82866441375026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39892685160414,
+          41.82881412100358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "down"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39908610682163,
+          41.82884861840076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "stairbuttons",
+        "floor": 1,
+        "selectable": false,
+        "direction": "up"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39908970494349,
+          41.82887133835163
+        ]
+      }
+    }
+  ]
+}

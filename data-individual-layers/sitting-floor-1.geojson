@@ -1,0 +1,110 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Sitting and Hangout Area",
+		"names": [
+		],
+        "place_type": "sitting",
+		"description": null,
+		"icon": "fas fa-comments",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39795452906382,
+          41.82880298468625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Sitting and Hangout Area",
+		"names": [
+		],
+        "place_type": "sitting",
+		"description": null,
+		"icon": "fas fa-comments",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39858791197716,
+          41.82923089225213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Sitting and Hangout Area",
+		"names": [
+		],
+        "place_type": "sitting",
+		"description": null,
+		"icon": "fas fa-comments",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39849925908094,
+          41.82901099755081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Sitting and Hangout Area",
+		"names": [
+		],
+        "place_type": "sitting",
+		"description": null,
+		"icon": "fas fa-comments",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39748593833845,
+          41.82861104272105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"title": "Sitting and Hangout Area",
+		"names": [
+		],
+        "place_type": "sitting",
+		"description": null,
+		"icon": "fas fa-comments",
+        "floor": 1,
+        "selectable": true,
+		"image": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39734871131554,
+          41.82870636520434
+        ]
+      }
+    }
+  ]
+}

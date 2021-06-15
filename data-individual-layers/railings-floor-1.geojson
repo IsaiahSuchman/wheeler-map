@@ -1,0 +1,663 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39854027729199,
+            41.82920884313908
+          ],
+          [
+            -71.3985371589563,
+            41.82918916443341
+          ],
+          [
+            -71.39860532263388,
+            41.82918315646537
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39788252734078,
+            41.82850714807233
+          ],
+          [
+            -71.39787559096852,
+            41.82849699565047
+          ],
+          [
+            -71.39787177305395,
+            41.82849141993948
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39803218768863,
+            41.82873215622302
+          ],
+          [
+            -71.39802491153138,
+            41.82873782128807
+          ],
+          [
+            -71.39801763537412,
+            41.82874350127578
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39837556501755,
+            41.82851625690803
+          ],
+          [
+            -71.39837266653558,
+            41.82852555955648
+          ],
+          [
+            -71.39837016786525,
+            41.82853358012898
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39863818521185,
+            41.82866026925095
+          ],
+          [
+            -71.39869167676562,
+            41.82865554340435
+          ],
+          [
+            -71.39868697925321,
+            41.82862596566653
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.3986665700701,
+            41.82864318461077
+          ],
+          [
+            -71.3986428227586,
+            41.82864528661478
+          ],
+          [
+            -71.39863622623236,
+            41.82864586805305
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39860642214643,
+            41.82852072934216
+          ],
+          [
+            -71.39860446310594,
+            41.82850838538026
+          ],
+          [
+            -71.39860044534655,
+            41.82848305650947
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39833220808524,
+            41.82899413647774
+          ],
+          [
+            -71.39831717604554,
+            41.82899546332171
+          ],
+          [
+            -71.39829718668297,
+            41.82899722246821
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39854123674235,
+            41.82921488092972
+          ],
+          [
+            -71.39857531870314,
+            41.82921186948436
+          ],
+          [
+            -71.39860940054193,
+            41.82920885806175
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39862857027232,
+            41.8291591245932
+          ],
+          [
+            -71.3985791566266,
+            41.82916349265963
+          ],
+          [
+            -71.39852974285886,
+            41.82916784584887
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.3991921503962,
+            41.82850610448617
+          ],
+          [
+            -71.39917200114557,
+            41.82851187391893
+          ],
+          [
+            -71.39915187184282,
+            41.82851765827436
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39910849493212,
+            41.82845847304437
+          ],
+          [
+            -71.39910725560141,
+            41.82845073572967
+          ],
+          [
+            -71.39910491681914,
+            41.82843594690626
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.3991218278028,
+            41.82839979473028
+          ],
+          [
+            -71.39911775001676,
+            41.82837409315665
+          ],
+          [
+            -71.39917569915934,
+            41.82836897968454
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39919730765541,
+            41.82836707140229
+          ],
+          [
+            -71.39921317921417,
+            41.82836567003595
+          ],
+          [
+            -71.39921397880698,
+            41.82837063446333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39931314603595,
+            41.82849446125292
+          ],
+          [
+            -71.39931022757558,
+            41.8284761540455
+          ],
+          [
+            -71.39930870839501,
+            41.82846649361687
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39768325338036,
+            41.82906867704674
+          ],
+          [
+            -71.3976687610925,
+            41.82907355202907
+          ],
+          [
+            -71.39765426880463,
+            41.82907841204324
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39774845867133,
+            41.8291143406066
+          ],
+          [
+            -71.3977790223628,
+            41.82910384528174
+          ],
+          [
+            -71.39775729393543,
+            41.82906848323399
+          ],
+          [
+            -71.397771326507,
+            41.82906331011668
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39776369055586,
+            41.82905057862025
+          ],
+          [
+            -71.39774719933173,
+            41.82905627348514
+          ],
+          [
+            -71.39774554018048,
+            41.8290536794879
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39894002458676,
+            41.82882038242958
+          ],
+          [
+            -71.39893674630201,
+            41.82880748687475
+          ],
+          [
+            -71.39898594015504,
+            41.82880015210823
+          ],
+          [
+            -71.39898396122767,
+            41.82878762925624
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39898813899713,
+            41.82867394005682
+          ],
+          [
+            -71.3990099673469,
+            41.82881154192902
+          ],
+          [
+            -71.3990158242155,
+            41.828848424588
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39901726345204,
+            41.82884830529761
+          ],
+          [
+            -71.39903171578314,
+            41.8288471723119
+          ],
+          [
+            -71.39905260469143,
+            41.82884554733295
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39840806761862,
+            41.82914172680437
+          ],
+          [
+            -71.3984285168195,
+            41.82913992293534
+          ],
+          [
+            -71.39844302911625,
+            41.8291386408139
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39850665516948,
+            41.82915687345346
+          ],
+          [
+            -71.39849148331162,
+            41.8291582151746
+          ],
+          [
+            -71.39847631133173,
+            41.82915955694124
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39754580662577,
+            41.82906088013235
+          ],
+          [
+            -71.39758276693766,
+            41.82904798457751
+          ],
+          [
+            -71.39761167147786,
+            41.82903789180085
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39825608855838,
+            41.82919002908399
+          ],
+          [
+            -71.39824449475249,
+            41.82911696444919
+          ],
+          [
+            -71.39823581931545,
+            41.82911773965473
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "railing",
+        "floor": 1,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.39823068203462,
+            41.82908532942988
+          ],
+          [
+            -71.39823935747167,
+            41.82908455417884
+          ],
+          [
+            -71.39822484517491,
+            41.82899313765959
+          ]
+        ]
+      }
+    }
+  ]
+}

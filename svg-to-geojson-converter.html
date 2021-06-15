@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="svg-to-geojson.min.js">
+	</script>
+  </head>
+  <body>
+      <svg id="mysvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1476.03 858.36" height="858.36" width="1476.03"><defs><style>.cls-1{fill:#00b7ff;}.cls-2{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><g id="floor-1"><g id="water-floor-1"><circle class="cls-1" cx="895.01" cy="687.85" r="1.95"/><circle class="cls-1" cx="746.72" cy="730.98" r="1.95"/><circle class="cls-1" cx="633.26" cy="661.48" r="1.95"/><circle class="cls-1" cx="196.09" cy="748.53" r="1.95"/><circle class="cls-1" cx="1088.82" cy="601.33" r="1.95"/><g id="boundaries"><polyline class="cls-2" points="0.5 2.96 0.5 0.5 3.54 0.5"/><polyline class="cls-2" points="1472.14 857.86 1475.53 857.86 1475.53 854.47"/></g></g></g></g></g></svg>
+    <script type="text/javascript">
+
+      //Adjust coordinates according to https://github.com/davecranwell/svg-to-geojson#usage
+      var geoJson = svgtogeojson.svgToGeoJson(
+                      [[41.82958534755769, -71.3967078924179], [41.828306231393505, -71.39965832233429]],
+                      document.getElementById('mysvg'),
+                      3);
+
+      //Downloading file (source: https://stackoverflow.com/a/34156339/9778755)
+      var file = new Blob([JSON.stringify(geoJson)], {type: "text/plain"})
+      var a = document.createElement('a');
+      a.setAttribute('href', URL.createObjectURL(file))
+      a.setAttribute('download', "recycling-floor-1.geojson");
+      a.click()
+    </script>
+  </body>
+</html>

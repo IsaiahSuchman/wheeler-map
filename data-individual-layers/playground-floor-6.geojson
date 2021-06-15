@@ -1,0 +1,35 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "playground",
+        "floor": 6,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39910877475147,
+          41.82900497470559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_type": "playground",
+        "floor": 6,
+        "selectable": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.39872327994297,
+          41.82886595654439
+        ]
+      }
+    }
+  ]
+}
